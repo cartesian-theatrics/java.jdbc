@@ -61,7 +61,7 @@ http://clojure-doc.org/articles/ecosystem/java_jdbc/home.html"}
   (let [n (name x)
         i (.indexOf n (int \.))]
     (if (= -1 i)
-      (f n)
+      (name (f x))
       (str/join "." (map f (.split n "\\."))))))
 
 (defn quoted
